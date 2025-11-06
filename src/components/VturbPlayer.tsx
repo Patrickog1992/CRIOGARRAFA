@@ -13,7 +13,6 @@ export const VturbPlayer: FC<VturbPlayerProps> = ({ playerId }) => {
 
   return (
     <>
-      <Script src={scriptSrc} strategy="lazyOnload" />
       <div
         id={smartPlayerId}
         style={{
@@ -23,6 +22,7 @@ export const VturbPlayer: FC<VturbPlayerProps> = ({ playerId }) => {
           maxWidth: "800px",
         }}
       ></div>
+      <Script src={scriptSrc} strategy="lazyOnload" />
     </>
   );
 };

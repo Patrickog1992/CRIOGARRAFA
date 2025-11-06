@@ -11,7 +11,7 @@ headers:
     # ('self'), and from Google's and Vturb's APIs and CDNs.
     key: Content-Security-Policy
     value: >-
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://scripts.converteai.net;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://scripts.converteai.net https://*.vturb.com;
       object-src 'none';
       base-uri 'self';
       connect-src 'self' https://*.converteai.net https://*.vturb.com;
