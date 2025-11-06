@@ -1,7 +1,6 @@
 "use client";
 
 import type { FC } from 'react';
-import Script from 'next/script';
 
 type VturbPlayerProps = {
   playerId: string;
@@ -9,10 +8,8 @@ type VturbPlayerProps = {
 
 export const VturbPlayer: FC<VturbPlayerProps> = ({ playerId }) => {
   const smartPlayerId = `vid-${playerId}`;
-  const scriptSrc = `https://scripts.converteai.net/82b0f5b7-3ef8-4fad-9a6a-1e700b3d750b/players/${playerId}/v4/player.js`;
 
   return (
-    <>
       <div
         id={smartPlayerId}
         style={{
@@ -22,7 +19,5 @@ export const VturbPlayer: FC<VturbPlayerProps> = ({ playerId }) => {
           maxWidth: "800px",
         }}
       ></div>
-      <Script src={scriptSrc} strategy="lazyOnload" />
-    </>
   );
 };
