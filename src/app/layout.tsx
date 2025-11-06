@@ -20,7 +20,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <Script src="https://scripts.converteai.net/82b0f5b7-3ef8-4fad-9a6a-1e700b3d750b/players/690b96ce1e2607a796dc4b67/v4/player.js" strategy="beforeInteractive" />
-        <Script src="https://scripts.converteai.net/82b0f5b7-3ef8-4fad-9a6a-1e700b3d750b/players/690ba39e1e2607a796dc5d41/v4/player.js" strategy="beforeInteractive" />
       </head>
       <body className="font-body antialiased">
         {children}
