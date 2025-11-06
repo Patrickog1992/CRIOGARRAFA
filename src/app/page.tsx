@@ -23,6 +23,7 @@ import { LoadingScreen } from '@/components/LoadingScreen';
 import { IMCChart } from '@/components/IMCChart';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle2, Award, BookOpen, Heart, Wind, Star } from 'lucide-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 type AnswerKey =
   | 'weightLossGoal'
@@ -477,7 +478,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
 
                     <div>
                         <h2 className="text-3xl font-bold mb-6">O que nossas alunas dizem...</h2>
-                        <Carousel className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto" opts={{ loop: true }} plugins={[require('embla-carousel-react').Autoplay({ delay: 3000, stopOnInteraction: true })]}>
+                        <Carousel className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto" opts={{ loop: true }} plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}>
                             <CarouselContent>
                                 {testimonialImages.map((imgId, index) => (
                                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
