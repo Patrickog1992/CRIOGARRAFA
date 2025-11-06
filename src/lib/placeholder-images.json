@@ -1,3 +1,88 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "info-how-it-works",
+      "description": "Diagram explaining how CrioCaseira works",
+      "imageUrl": "https://i.imgur.com/h09kXgB.jpg",
+      "imageHint": "infographic diagram"
+    },
+    {
+      "id": "info-testimonials-header",
+      "description": "Header image for testimonials section",
+      "imageUrl": "https://i.imgur.com/GOg2lAI.png",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "info-pamela-result",
+      "description": "Before and after result of a user named Pamela",
+      "imageUrl": "https://i.imgur.com/4yumaw9.png",
+      "imageHint": "before after"
+    },
+    {
+      "id": "info-without-crio",
+      "description": "Image representing body without CrioCaseira",
+      "imageUrl": "https://i.imgur.com/V6997ol.png",
+      "imageHint": "woman sad"
+    },
+    {
+      "id": "info-with-crio",
+      "description": "Image representing body with CrioCaseira",
+      "imageUrl": "https://i.imgur.com/kkc70lF.png",
+      "imageHint": "woman happy"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Testimonial image 1",
+      "imageUrl": "https://i.imgur.com/ipOh27y.jpg",
+      "imageHint": "review testimonial"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Testimonial image 2",
+      "imageUrl": "https://i.imgur.com/AJCfcXk.jpg",
+      "imageHint": "review testimonial"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Testimonial image 3",
+      "imageUrl": "https://i.imgur.com/BTYdqvQ.jpg",
+      "imageHint": "review testimonial"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "Testimonial image 4",
+      "imageUrl": "https://i.imgur.com/TAUXKtX.jpg",
+      "imageHint": "review testimonial"
+    },
+    {
+      "id": "testimonial-5",
+      "description": "Testimonial image 5",
+      "imageUrl": "https://i.imgur.com/S5Aj7OJ.jpg",
+      "imageHint": "review testimonial"
+    },
+    {
+      "id": "dream-body-fit",
+      "description": "Dream body type: Em Forma",
+      "imageUrl": "https://images.unsplash.com/photo-1434682966726-19ad3a76e143?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zml0JTIwYm9keXxlbnwwfHx8fDE3NjIzOTUyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fit body"
+    },
+    {
+      "id": "dream-body-curves",
+      "description": "Dream body type: Com Curvas",
+      "imageUrl": "https://images.unsplash.com/photo-1567095943017-31cfb97c2409?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjdXJ2eSUyMGJvZHl8ZW58MHx8fHwxNzYyNDM2NDY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "curvy body"
+    },
+    {
+      "id": "dream-body-defined",
+      "description": "Dream body type: Definido",
+      "imageUrl": "https://images.unsplash.com/photo-1591267802076-da29ebeb3037?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZWZpbmVkJTIwbXVzY2xlc3xlbnwwfHx8fDE3NjI0MzY0NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "defined muscles"
+    },
+    {
+      "id": "dream-body-natural",
+      "description": "Dream body type: Natural",
+      "imageUrl": "https://images.unsplash.com/photo-1661791955260-e23e9ab8269c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuYXR1cmFsJTIwYm9keXxlbnwwfHx8fDE3NjIzNzI3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "natural body"
+    }
+  ]
 }
