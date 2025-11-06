@@ -1,12 +1,22 @@
 "use client";
 
-import type { FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 
 type VturbPlayerProps = {
   playerId: string;
 };
 
 export const VturbPlayer: FC<VturbPlayerProps> = ({ playerId }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
+  if (!isClient) {
+    return null;
+  }
+
   const smartPlayerId = `vid-${playerId}`;
 
   return (
