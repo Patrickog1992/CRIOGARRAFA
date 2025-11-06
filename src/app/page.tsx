@@ -224,7 +224,7 @@ export default function Home() {
 
       case 14:
         const imc = answers.height > 0 ? (answers.currentWeight / ((answers.height / 100) ** 2)) : 0;
-        return <IMCResultStep imc={imc} onContinue={() => setStep(15)} />;
+        return <IMCResultStep imc={imc} onContinue={() => setStep(15)} getImage={getImage} />;
 
       case 15:
         const q11Options = [
@@ -239,7 +239,7 @@ export default function Home() {
         return <LoadingScreen title="Gerando Sua CrioCaseira..." subtitle="Estamos mapeando seu perfil de acordo com todas suas respostas..." onComplete={() => setStep(17)} />;
 
       case 17:
-        return <ResultPage answers={answers} showButton={showResultButton} />;
+        return <ResultPage answers={answers} showButton={showResultButton} getImage={getImage} />;
 
       default:
         return <div>Fim do quizz</div>;
@@ -341,7 +341,7 @@ const MeasurementStep = ({ answers, setAnswers, onContinue }: any) => (
   </div>
 );
 
-const IMCResultStep = ({ imc, onContinue }: { imc: number, onContinue: () => void }) => (
+const IMCResultStep = ({ imc, onContinue, getImage }: { imc: number, onContinue: () => void, getImage: (id: string) => any }) => (
   <div className="flex flex-col items-center justify-center min-h-[80vh] text-center p-4">
     <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">Resultado da Sua Avaliação Individual</h2>
     <IMCChart imc={imc} />
@@ -394,7 +394,7 @@ const ImageQuestionStep = ({ title, description, options, field, onAnswer }: Ima
 );
 
 
-const ResultPage = ({ answers, showButton }: { answers: typeof initialAnswers, showButton: boolean }) => {
+const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initialAnswers, showButton: boolean, getImage: (id: string) => any }) => {
     const testimonialImages = ['testimonial-1', 'testimonial-2', 'testimonial-3', 'testimonial-4', 'testimonial-5'];
     const testimonials = [
         "“Perdi 8kg em 3 semanas! Minhas roupas estão largas e meu marido não para de me elogiar. Estou me sentindo outra mulher!” - Joana L.",
