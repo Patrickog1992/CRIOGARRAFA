@@ -248,7 +248,7 @@ export default function Home() {
   };
 
   return (
-    <main className="container mx-auto px-4 py-8 flex flex-col items-center">
+    <main className="container mx-auto px-4 pt-8 pb-24 flex flex-col items-center">
         <Image src="https://i.imgur.com/22OUPSY.png" alt="CrioCaseira Logo" width={100} height={100} className="mb-8" />
         {renderStep()}
     </main>
@@ -544,7 +544,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         </div>
                     </div>
                     
-                    <div className="max-w-3xl mx-auto">
+                    <div className="max-w-3xl mx-auto text-center">
                         <p className="text-lg font-bold">Todos esses bônus somam mais de R$735,00! E hoje para as 3 próximas que finalizarem a inscrição receberão totalmente GRATUITO junto com o plano personalizado CrioCaseira</p>
                         <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-4 text-muted-foreground text-sm">
                             <p className="text-center md:text-left">➜ CrioCaseira Personalizada (R$297,00)</p><p className="text-center md:text-left">➜ Chá Turbo Seca (R$97,00)</p>
@@ -573,7 +573,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         <PulsatingButton className="w-full mt-4">COMEÇAR AGORA</PulsatingButton>
                     </div>
 
-                    <div className="max-w-2xl mx-auto">
+                    <div className="max-w-2xl mx-auto text-center">
                         <h3 className="text-2xl font-bold mb-4">Compare os Custos de Emagrecer</h3>
                         <div className="text-center space-y-2 text-muted-foreground">
                             <p>Ozempic (1 mês): <span className="font-bold">R$3.000</span></p>
@@ -584,7 +584,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         </div>
                     </div>
                     
-                    <div className="max-w-2xl mx-auto">
+                    <div className="max-w-2xl mx-auto text-center">
                         <h3 className="text-2xl font-bold mb-4">Agora Você Tem 2 Escolhas...</h3>
                         <div className="grid md:grid-cols-2 gap-4 text-center">
                             <div className="border border-destructive p-4 rounded-lg">
