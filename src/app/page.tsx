@@ -124,10 +124,10 @@ export default function Home() {
       
       case 2:
         const q2Options = [
-          { label: '18 a 29 anos', value: '18 a 29 anos' },
-          { label: '30 a 39 anos', value: '30 a 39 anos' },
-          { label: '40 a 49 anos', value: '40 a 49 anos' },
-          { label: '50 anos ou mais', value: '50 anos ou mais' },
+          { icon: '🎂', label: '18 a 29 anos', desc: 'Metabolismo jovem, focado em resultados rápidos.', value: '18 a 29 anos' },
+          { icon: '⏳', label: '30 a 39 anos', desc: 'Ajustes para manter a queima de gordura em alta.', value: '30 a 39 anos' },
+          { icon: '🌟', label: '40 a 49 anos', desc: 'Foco em reativar o metabolismo e combater a flacidez.', value: '40 a 49 anos' },
+          { icon: '💎', label: '50 anos ou mais', desc: 'Cuidado especial para garantir resultados seguros e eficazes.', value: '50 anos ou mais' },
         ];
         return <QuestionStep title="Qual é a sua faixa de idade atual?" description="Cada fase da vida exige um tipo diferente de cuidado com o metabolismo e o acúmulo de gordura. O Protocolo CrioCaseira se adapta de forma personalizada ao seu momento." options={q2Options} field="ageRange" onAnswer={handleAnswer} />;
 
@@ -142,11 +142,11 @@ export default function Home() {
 
       case 4:
         const q4Options = [
-            { label: 'Barriga / Abdômen', value: 'Barriga / Abdômen' },
-            { label: 'Culotes / Flancos', value: 'Culotes / Flancos' },
-            { label: 'Coxas / Pernas', value: 'Coxas / Pernas' },
-            { label: 'Glúteos', value: 'Glúteos' },
-            { label: 'Braços', value: 'Braços' },
+            { icon: '🎯', label: 'Barriga / Abdômen', desc: 'A região que mais incomoda e parece nunca diminuir.', value: 'Barriga / Abdômen' },
+            { icon: '👖', label: 'Culotes / Flancos', desc: 'Aquelas gordurinhas que “saltam” da calça jeans.', value: 'Culotes / Flancos' },
+            { icon: '🦵', label: 'Coxas / Pernas', desc: 'Gostaria de reduzir o atrito e a aparência de casca de laranja.', value: 'Coxas / Pernas' },
+            { icon: '🍑', label: 'Glúteos', desc: 'Quero levantar e firmar, eliminando a gordura que pesa.', value: 'Glúteos' },
+            { icon: '💪', label: 'Braços', desc: 'O famoso “gordinho do tchau” que te impede de usar regatas.', value: 'Braços' },
         ];
         return <QuestionStep title="Qual área do seu corpo você mais deseja reduzir gordura?" description="Escolha a região onde você mais quer ver a diferença nas próximas semanas" options={q4Options} field="targetArea" onAnswer={handleAnswer} />;
 
