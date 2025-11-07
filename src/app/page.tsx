@@ -270,10 +270,10 @@ const QuestionStep = ({ title, description, options, field, onAnswer }: Question
           className="h-auto p-6 text-left justify-start bg-white/50 border-primary/20 hover:bg-primary/10 hover:border-primary"
           onClick={() => onAnswer(field, opt.value)}
         >
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4 w-full">
             {opt.icon && <span className="text-3xl mt-1">{opt.icon}</span>}
-            <div className="flex flex-col">
-              <span className="font-semibold text-lg text-primary">{opt.label}</span>
+            <div className="flex flex-col flex-1 min-w-0">
+              <span className="font-semibold text-lg text-primary break-words whitespace-normal">{opt.label}</span>
               {opt.desc && <p className="text-muted-foreground text-sm mt-1 whitespace-normal">{opt.desc}</p>}
             </div>
           </div>
