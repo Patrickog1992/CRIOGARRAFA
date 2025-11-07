@@ -247,7 +247,12 @@ export default function Home() {
     }
   };
 
-  return <main className="container mx-auto px-4 py-8">{renderStep()}</main>;
+  return (
+    <main className="container mx-auto px-4 py-8 flex flex-col items-center">
+        <Image src="https://i.imgur.com/22OUPSY.png" alt="CrioCaseira Logo" width={100} height={100} className="mb-8" />
+        {renderStep()}
+    </main>
+  );
 }
 
 interface QuestionStepProps {
@@ -500,9 +505,9 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         <PulsatingButton size="lg" className="mt-4">COMEÇAR AGORA</PulsatingButton>
                     </div>
 
-                    <div className="max-w-2xl mx-auto">
+                    <div className="max-w-2xl mx-auto text-center">
                         <h2 className="text-3xl font-bold">Volte a Ser Tratada Como Realmente Merece...</h2>
-                        <ul className="mt-6 space-y-3 text-left">
+                        <ul className="mt-6 space-y-3 text-left inline-block">
                             <li className="flex items-start gap-3"><CheckCircle2 className="text-green-500 w-6 h-6 shrink-0 mt-1" />Redescubra o prazer de se olhar no espelho e sorrir com orgulho</li>
                             <li className="flex items-start gap-3"><CheckCircle2 className="text-green-500 w-6 h-6 shrink-0 mt-1" />Sinta suas roupas preferidas voltarem a servir como se fossem novas</li>
                             <li className="flex items-start gap-3"><CheckCircle2 className="text-green-500 w-6 h-6 shrink-0 mt-1" />Acorde mais leve, com o corpo desinchado e a autoestima lá em cima</li>
