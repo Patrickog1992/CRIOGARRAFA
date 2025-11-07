@@ -152,9 +152,9 @@ export default function Home() {
 
       case 5:
         const q5Options = [
-            { icon: '⏰', label: 'Falta de tempo', desc: 'Minha rotina é corrida e quase não consigo cuidar de mim.', value: 'Falta de tempo' },
-            { icon: '😵‍💫', label: 'Falta de foco ou autocontrole', desc: 'Eu começo, mas acabo desistindo no meio do caminho.', value: 'Falta de foco' },
-            { icon: '💰', label: 'Falta de dinheiro', desc: 'Tratamentos e academias são caros, quero algo acessível e natural.', value: 'Falta de dinheiro' },
+          { icon: '⏰', label: 'Falta de tempo', desc: 'Minha rotina é corrida e quase não consigo cuidar de mim.', value: 'Falta de tempo' },
+          { icon: '😵‍💫', label: 'Falta de foco ou autocontrole', desc: 'Eu começo, mas acabo desistindo no meio do caminho.', value: 'Falta de foco' },
+          { icon: '💰', label: 'Falta de dinheiro', desc: 'Tratamentos e academias são caros, quero algo acessível e natural.', value: 'Falta de dinheiro' },
         ];
         return <QuestionStep title="O que mais te impede de eliminar gordura hoje?" description="Sua resposta nos ajuda a entender qual é o principal bloqueio que pode estar travando o seu processo de queima de gordura" options={q5Options} field="mainImpediment" onAnswer={handleAnswer} />;
 
@@ -195,10 +195,10 @@ export default function Home() {
 
       case 10:
         const q8Options = [
-            { icon: '🏃‍♀️', label: 'Minha rotina é corrida, mal tenho tempo pra mim', value: 'Minha rotina é corrida, mal tenho tempo pra mim' },
-            { icon: '🏡', label: 'Fico em casa, mas cuido de tudo e vivo cansada', value: 'Fico em casa, mas cuido de tudo e vivo cansada' },
-            { icon: '⏱️', label: 'Tenho horários flexíveis e posso ajustar meu tempo', value: 'Tenho horários flexíveis e posso ajustar meu tempo' },
-            { icon: '🏢', label: 'Trabalho fora e chego exausta no fim do dia', value: 'Trabalho fora e chego exausta no fim do dia' },
+            { icon: '🏃‍♀️', label: 'Minha rotina é corrida, mal tenho tempo pra mim', desc: 'A CrioCaseira age enquanto você descansa.', value: 'Minha rotina é corrida, mal tenho tempo pra mim' },
+            { icon: '🏡', label: 'Fico em casa, mas cuido de tudo e vivo cansada', desc: 'Um ritual de apenas 12 minutos para recarregar as energias.', value: 'Fico em casa, mas cuido de tudo e vivo cansada' },
+            { icon: '⏱️', label: 'Tenho horários flexíveis e posso ajustar meu tempo', desc: 'Encaixe o ritual no seu melhor momento e acelere os resultados.', value: 'Tenho horários flexíveis e posso ajustar meu tempo' },
+            { icon: '🏢', label: 'Trabalho fora e chego exausta no fim do dia', desc: 'Use a CrioCaseira para relaxar e queimar gordura ao mesmo tempo.', value: 'Trabalho fora e chego exausta no fim do dia' },
         ];
         return <QuestionStep title="Como é sua rotina atualmente?" description="Vamos adaptar a CrioCaseira para caber na sua realidade" options={q8Options} field="dailyRoutine" onAnswer={handleAnswer} />;
 
@@ -267,7 +267,7 @@ const QuestionStep = ({ title, description, options, field, onAnswer }: Question
         <Button
           key={opt.value}
           variant="outline"
-          className="h-auto p-6 text-left justify-start bg-white/50 border-primary/20 hover:bg-primary/10 hover:border-primary"
+          className="h-auto p-6 text-left justify-start bg-white/50 border-primary/20 hover:bg-primary/10 hover:border-primary flex-wrap"
           onClick={() => onAnswer(field, opt.value)}
         >
           <div className="flex items-start gap-4 w-full">
@@ -433,7 +433,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                 {showButton && (
                 <div id="call-to-action" className="mt-8">
                   <PulsatingButton size="lg" className="w-full max-w-md">COMEÇAR AGORA</PulsatingButton>
-                  <div className="mt-12 text-left max-w-4xl mx-auto space-y-12">
+                  <div className="mt-12 max-w-4xl mx-auto space-y-12">
                     
                     <h2 className="text-3xl md:text-4xl font-bold text-center">Daqui 3 Semanas Você Vai Agradecer por Ter Começado Hoje...</h2>
                     <p className="text-xl text-center text-muted-foreground">De acordo com Suas Respostas Esses Poderão Ser Seus Resultados...</p>
@@ -467,12 +467,12 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         <CardHeader>
                             <CardTitle className="text-primary text-3xl">Seu Protocolo Personalizado CrioCaseiro...</CardTitle>
                         </CardHeader>
-                        <CardContent className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-                            <div className="flex items-start gap-3"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Meta de Perda de Peso:</span> Perca {answers.weightLossGoal.toLowerCase()} em 3 Semanas</p></div>
-                            <div className="flex items-start gap-3"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Faixa de Idade Ideal:</span> Feito pra você que tem de {answers.ageRange.toLowerCase()}</p></div>
-                            <div className="flex items-start gap-3"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Objetivo Principal:</span> Reduza na Região de {answers.targetArea.toLowerCase()}</p></div>
-                            <div className="flex items-start gap-3"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Corpo dos Sonhos:</span> Conquiste um Corpo {answers.dreamBody.toLowerCase()}</p></div>
-                            <div className="flex items-start gap-3 col-span-1 md:col-span-2"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Benefício Principal:</span> Para Você que quer {answers.desiredBenefit.toLowerCase()}</p></div>
+                        <CardContent className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-center justify-center">
+                            <div className="flex items-start gap-3 justify-center md:justify-start"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Meta de Perda de Peso:</span> Perca {answers.weightLossGoal.toLowerCase()} em 3 Semanas</p></div>
+                            <div className="flex items-start gap-3 justify-center md:justify-start"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Faixa de Idade Ideal:</span> Feito pra você que tem de {answers.ageRange.toLowerCase()}</p></div>
+                            <div className="flex items-start gap-3 justify-center md:justify-start"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Objetivo Principal:</span> Reduza na Região de {answers.targetArea.toLowerCase()}</p></div>
+                            <div className="flex items-start gap-3 justify-center md:justify-start"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Corpo dos Sonhos:</span> Conquiste um Corpo {answers.dreamBody.toLowerCase()}</p></div>
+                            <div className="flex items-start gap-3 justify-center md:justify-start md:col-span-2"><Star className="text-primary mt-1 w-5 h-5 shrink-0" /><p><span className="font-bold">Benefício Principal:</span> Para Você que quer {answers.desiredBenefit.toLowerCase()}</p></div>
                         </CardContent>
                     </Card>
 
@@ -513,7 +513,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
 
                     <div className="max-w-3xl mx-auto">
                          <h2 className="text-3xl font-bold mb-6">Sua Jornada de Transformação Com a CrioCaseira</h2>
-                        <div className="grid md:grid-cols-3 gap-6 text-left">
+                        <div className="grid md:grid-cols-3 gap-6 text-center">
                            <Card><CardContent className="p-4"> <h3 className="font-bold text-primary">7 Dias - Primeira Semana</h3><p className="text-sm text-muted-foreground mt-2">Você acorda e sente sua calça jeans escorregando pela cintura. A gordura da região de {answers.targetArea.toLowerCase()} já diminuiu significativamente.</p></CardContent></Card>
                            <Card><CardContent className="p-4"> <h3 className="font-bold text-primary">14 Dias - Segunda Semana</h3><p className="text-sm text-muted-foreground mt-2">Seu marido te abraça por trás e sussurra “Nossa, você está diferente… O que você fez?”</p></CardContent></Card>
                            <Card><CardContent className="p-4"> <h3 className="font-bold text-primary">21 Dias - Terceira Semana</h3><p className="text-sm text-muted-foreground mt-2">Suas Amigas param a conversa quando você chega “Gente, você fez lipo? Está irreconhecível!”</p></CardContent></Card>
@@ -523,12 +523,12 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-3xl font-bold">🎁 Ganhe 5 Bônus Exclusivos que Aceleram Sua Evolução</h2>
                         <p className="text-lg text-destructive font-semibold mt-2">Últimas 3 Vagas</p>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 text-left">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 text-center">
                             {bonus.map((b, i) => (
                                 <Card key={i} className="bg-white">
                                     <CardHeader>
-                                        <Award className="w-8 h-8 text-yellow-500" />
-                                        <CardTitle>BÔNUS {i+1} - {b.title}</CardTitle>
+                                        <Award className="w-8 h-8 text-yellow-500 mx-auto" />
+                                        <CardTitle>{b.title}</CardTitle>
                                     </CardHeader>
                                     <CardContent>
                                         <p className="text-sm text-muted-foreground">{b.desc}</p>
@@ -541,13 +541,13 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                     
                     <div className="max-w-3xl mx-auto">
                         <p className="text-lg font-bold">Todos esses bônus somam mais de R$735,00! E hoje para as 3 próximas que finalizarem a inscrição receberão totalmente GRATUITO junto com o plano personalizado CrioCaseira</p>
-                        <div className="grid grid-cols-2 text-left gap-x-8 gap-y-2 mt-4 text-muted-foreground text-sm">
-                            <p>➜ CrioCaseira Personalizada (R$297,00)</p><p>➜ Chá Turbo Seca (R$97,00)</p>
-                            <p>➜ Dieta Personalizada (R$197,00)</p><p>➜ Modo AnriReganho (R$97,00)</p>
-                            <p>➜ Libido em Alta (R$197,00)</p><p>➜ Plano Barriga Livre (R$147,00)</p>
-                            <p>➜ Suporte (R$97,00)</p><p>➜ Material Passo a Passo (R$97,00)</p>
-                            <p>➜ 4 Bônus Premium (R$735,00)</p><p>➜ Material Premium (R$297,00)</p>
-                            <p>➜ Acesso ao App (R$97,00)</p><p>➜ Grupo Exclusivo (R$47,00)</p>
+                        <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-4 text-muted-foreground text-sm">
+                            <p className="text-center md:text-left">➜ CrioCaseira Personalizada (R$297,00)</p><p className="text-center md:text-left">➜ Chá Turbo Seca (R$97,00)</p>
+                            <p className="text-center md:text-left">➜ Dieta Personalizada (R$197,00)</p><p className="text-center md:text-left">➜ Modo AnriReganho (R$97,00)</p>
+                            <p className="text-center md:text-left">➜ Libido em Alta (R$197,00)</p><p className="text-center md:text-left">➜ Plano Barriga Livre (R$147,00)</p>
+                            <p className="text-center md:text-left">➜ Suporte (R$97,00)</p><p className="text-center md:text-left">➜ Material Passo a Passo (R$97,00)</p>
+                            <p className="text-center md:text-left">➜ 4 Bônus Premium (R$735,00)</p><p className="text-center md:text-left">➜ Material Premium (R$297,00)</p>
+                            <p className="text-center md:text-left">➜ Acesso ao App (R$97,00)</p><p className="text-center md:text-left">➜ Grupo Exclusivo (R$47,00)</p>
                         </div>
                         <div className="border-2 border-destructive rounded-lg p-6 mt-8 relative bg-white">
                             <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-destructive text-destructive-foreground px-4 py-1 rounded-full text-sm font-bold">93% OFF</span>
@@ -560,7 +560,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         </div>
                     </div>
 
-                    <div className="max-w-lg mx-auto text-left p-6 bg-white rounded-lg shadow-xl">
+                    <div className="max-w-lg mx-auto text-center p-6 bg-white rounded-lg shadow-xl">
                         <p className="text-center text-xl font-bold mb-4">Imagine se daqui 3 semanas você olha no espelho e mal se reconhece... Só porque decidiu começar HOJE.</p>
                         <p className="text-muted-foreground">Você tem 30 dias completos para colocar a CrioCaseira em prática. Se, por qualquer motivo, não perceber resultado ou não se sentir satisfeita, é só enviar um e-mail ou WhatsApp e devolvemos 100% do seu dinheiro.</p>
                         <p className="font-bold mt-2">💰 Sem pegadinhas, sem burocracia, sem letras miúdas.</p>
@@ -570,7 +570,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
 
                     <div className="max-w-2xl mx-auto">
                         <h3 className="text-2xl font-bold mb-4">Compare os Custos de Emagrecer</h3>
-                        <div className="text-left space-y-2 text-muted-foreground">
+                        <div className="text-center space-y-2 text-muted-foreground">
                             <p>Ozempic (1 mês): <span className="font-bold">R$3.000</span></p>
                             <p>Nutri particular: <span className="font-bold">R$400/Consulta</span></p>
                             <p>Academia + Personal: <span className="font-bold">R$600/mês</span></p>
@@ -581,7 +581,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                     
                     <div className="max-w-2xl mx-auto">
                         <h3 className="text-2xl font-bold mb-4">Agora Você Tem 2 Escolhas...</h3>
-                        <div className="grid md:grid-cols-2 gap-4 text-left">
+                        <div className="grid md:grid-cols-2 gap-4 text-center">
                             <div className="border border-destructive p-4 rounded-lg">
                                 <h4 className="font-bold">1. Continuar lutando</h4>
                                 <p className="text-sm text-muted-foreground mt-2">Continuar lutando contra a balança, testando dietas malucas, gastando dinheiro com produtos caros, se frustrando a cada roupa que não entra e sentindo que nada funciona pra você.</p>
@@ -594,12 +594,12 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         <PulsatingButton size="lg" className="mt-6">QUERO MINHA VAGA</PulsatingButton>
                     </div>
 
-                    <div className="max-w-3xl mx-auto text-left">
+                    <div className="max-w-3xl mx-auto">
                         <h2 className="text-3xl font-bold text-center mb-6">❓Dúvidas Frequentes</h2>
-                        <Accordion type="single" collapsible className="w-full">
+                        <Accordion type="single" collapsible className="w-full text-left">
                             {faqs.map((faq, i) => (
                                 <AccordionItem value={`item-${i}`} key={i}>
-                                    <AccordionTrigger className="font-semibold text-primary">🔹 {i+1}. {faq.q}</AccordionTrigger>
+                                    <AccordionTrigger className="font-semibold text-primary text-left">🔹 {i+1}. {faq.q}</AccordionTrigger>
                                     <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
                                 </AccordionItem>
                             ))}
