@@ -103,7 +103,7 @@ export default function Home() {
             <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4 max-w-2xl">
               Novo ritual de 12 Minutos com garrafa PET que congela a gordura e seca até 6kg por semana
             </h1>
-            <VturbPlayer playerId="690b96ce1e2607a796dc4b67" />
+            <VturbPlayer playerId="690dfc71230c7d2caf61cbf9" />
             {showWelcomeButton && (
               <PulsatingButton size="lg" className="mt-8" onClick={() => setStep(1)}>
                 QUERO A AVALIAÇÃO GRATUITA
