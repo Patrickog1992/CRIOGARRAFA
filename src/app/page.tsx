@@ -613,5 +613,3 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
         </div>
     );
 };
-
-    
