@@ -562,8 +562,8 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                             <p className="font-bold">VALOR NORMAL SEM DESCONTO</p>
                             <p className="text-2xl font-bold text-destructive">R$ 2.405</p>
                         </div>
-                        <div className="border-2 border-destructive rounded-lg p-6 mt-8 relative bg-white">
-                            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-destructive text-destructive-foreground px-4 py-1 rounded-full text-sm font-bold">93% OFF</span>
+                        <div className="border-2 border-success rounded-lg p-6 mt-8 relative bg-white">
+                            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-success text-success-foreground px-4 py-1 rounded-full text-sm font-bold">93% OFF</span>
                             <p className="text-lg font-semibold mt-2">Mas apenas hoje, até as 23:59 ou acabar as 3 últimas vagas você levará com 93% de DESCONTO 👇🏷️</p>
                             <p className="text-sm text-muted-foreground mt-4">Por apenas 7x de</p>
                             <p className="text-6xl font-bold text-success">R$ 6,16</p>
