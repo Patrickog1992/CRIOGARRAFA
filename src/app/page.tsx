@@ -47,9 +47,9 @@ const initialAnswers: Record<AnswerKey, any> = {
   targetArea: '',
   mainImpediment: '',
   desiredBenefit: '',
-  currentWeight: 70,
-  height: 165,
-  desiredWeight: 60,
+  currentWeight: '',
+  height: '',
+  desiredWeight: '',
   dailyRoutine: '',
   sleepHours: '',
   waterIntake: '',
@@ -204,19 +204,19 @@ export default function Home() {
 
       case 11:
         const q9Options = [
-            { icon: '⏰', label: 'Menos de 5 horas', value: 'Menos de 5 horas' },
-            { icon: '⏲️', label: 'Entre 5 e 7 horas', value: 'Entre 5 e 7 horas' },
-            { icon: '🕛', label: 'Entre 7 e 9 horas', value: 'Entre 7 e 9 horas' },
-            { icon: '⌚', label: 'Mais de 9 horas', value: 'Mais de 9 horas' },
+            { icon: '⏰', label: 'Menos de 5 horas', desc: 'Sono insuficiente pode travar a queima de gordura.', value: 'Menos de 5 horas' },
+            { icon: '⏲️', label: 'Entre 5 e 7 horas', desc: 'É o mínimo para regular hormônios e o metabolismo.', value: 'Entre 5 e 7 horas' },
+            { icon: '🕛', label: 'Entre 7 e 9 horas', desc: 'Ideal para recuperação e máxima queima de gordura.', value: 'Entre 7 e 9 horas' },
+            { icon: '⌚', label: 'Mais de 9 horas', desc: 'Sono de qualidade para uma transformação completa.', value: 'Mais de 9 horas' },
         ];
         return <QuestionStep title="Quantas horas de sono você tem por noite?" description="O sono influencia diretamente na eliminação de gordura e no do metabolismo" options={q9Options} field="sleepHours" onAnswer={handleAnswer} />;
 
       case 12:
         const q10Options = [
-            { icon: '🫖', label: 'Bebo só café ou chá', value: 'Bebo só café ou chá' },
-            { icon: '🥤', label: '1 a 2 copos por dia', value: '1 a 2 copos por dia' },
-            { icon: '🍶', label: '3 a 5 copos por dia', value: '3 a 5 copos por dia' },
-            { icon: '🫙', label: 'Mais de 6 copos por dia', value: 'Mais de 6 copos por dia' },
+            { icon: '🫖', label: 'Bebo só café ou chá', desc: 'A hidratação é chave para eliminar toxinas e gordura.', value: 'Bebo só café ou chá' },
+            { icon: '🥤', label: '1 a 2 copos por dia', desc: 'Aumentar a água acelera a limpeza do organismo.', value: '1 a 2 copos por dia' },
+            { icon: '🍶', label: '3 a 5 copos por dia', desc: 'Bom começo para otimizar a queima de gordura.', value: '3 a 5 copos por dia' },
+            { icon: '🫙', label: 'Mais de 6 copos por dia', desc: 'Nível ideal para turbinar a eliminação de gordura.', value: 'Mais de 6 copos por dia' },
         ];
         return <QuestionStep title="Quantos copos de água você costuma beber por dia?" description="A hidratação é essencial para que o corpo consiga eliminar as células de gordura destruídas pela Criocaseira" options={q10Options} field="waterIntake" onAnswer={handleAnswer} />;
 
@@ -319,21 +319,21 @@ const MeasurementStep = ({ answers, setAnswers, onContinue }: any) => (
         <div>
             <Label htmlFor="currentWeight" className="font-semibold">Qual seu peso atual?</Label>
             <div className="relative mt-1">
-                <Input id="currentWeight" type="number" value={answers.currentWeight} onChange={(e) => setAnswers({...answers, currentWeight: Number(e.target.value)})} className="pr-10" />
+                <Input id="currentWeight" type="number" value={answers.currentWeight} onChange={(e) => setAnswers({...answers, currentWeight: Number(e.target.value)})} placeholder="Digite aqui" className="pr-10" />
                 <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-muted-foreground">kg</span>
             </div>
         </div>
         <div>
             <Label htmlFor="height" className="font-semibold">Qual a sua altura?</Label>
             <div className="relative mt-1">
-                <Input id="height" type="number" value={answers.height} onChange={(e) => setAnswers({...answers, height: Number(e.target.value)})} className="pr-12" />
+                <Input id="height" type="number" value={answers.height} onChange={(e) => setAnswers({...answers, height: Number(e.target.value)})} placeholder="Digite aqui" className="pr-12" />
                 <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-muted-foreground">cm</span>
             </div>
         </div>
         <div>
             <Label htmlFor="desiredWeight" className="font-semibold">Qual é o seu peso desejado?</Label>
             <div className="relative mt-1">
-                <Input id="desiredWeight" type="number" value={answers.desiredWeight} onChange={(e) => setAnswers({...answers, desiredWeight: Number(e.target.value)})} className="pr-10" />
+                <Input id="desiredWeight" type="number" value={answers.desiredWeight} onChange={(e) => setAnswers({...answers, desiredWeight: Number(e.target.value)})} placeholder="Digite aqui" className="pr-10" />
                 <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-muted-foreground">kg</span>
             </div>
         </div>
