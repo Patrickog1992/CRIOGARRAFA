@@ -63,25 +63,25 @@
     {
       "id": "dream-body-fit",
       "description": "Dream body type: Em Forma",
-      "imageUrl": "https://images.unsplash.com/photo-1434682966726-19ad3a76e143?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zml0JTIwYm9keXxlbnwwfHx8fDE3NjIzOTUyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/roHvVds.jpg",
       "imageHint": "fit body"
     },
     {
       "id": "dream-body-curves",
       "description": "Dream body type: Com Curvas",
-      "imageUrl": "https://images.unsplash.com/photo-1567095943017-31cfb97c2409?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjdXJ2eSUyMGJvZHl8ZW58MHx8fHwxNzYyNDM2NDY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/PAUEhYd.jpg",
       "imageHint": "curvy body"
     },
     {
       "id": "dream-body-defined",
       "description": "Dream body type: Definido",
-      "imageUrl": "https://images.unsplash.com/photo-1591267802076-da29ebeb3037?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZWZpbmVkJTIwbXVzY2xlc3xlbnwwfHx8fDE3NjI0MzY0NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/Q4aqjQW.jpg",
       "imageHint": "defined muscles"
     },
     {
       "id": "dream-body-natural",
       "description": "Dream body type: Natural",
-      "imageUrl": "https://images.unsplash.com/photo-1661791955260-e23e9ab8269c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuYXR1cmFsJTIwYm9keXxlbnwwfHx8fDE3NjIzNzI3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/mT99SIb.jpg",
       "imageHint": "natural body"
     }
   ]
