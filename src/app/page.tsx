@@ -583,7 +583,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                             <p>Nutri particular: <span className="font-bold">R$400/Consulta</span></p>
                             <p>Academia + Personal: <span className="font-bold">R$600/mês</span></p>
                             <p>Cirurgia Bariatrica: <span className="font-bold">R$20.000 a R$50.000</span></p>
-                            <p className="text-success font-bold mt-2 text-lg">✅ CrioCaseira: Só R$43,12 (com garantia de 30 dias!)</p>
+                            <p className="text-success font-bold mt-2 text-lg">✅ CrioCaseira: Só R$37,00 (com garantia de 30 dias!)</p>
                         </div>
                     </div>
                     
