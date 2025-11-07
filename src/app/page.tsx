@@ -547,18 +547,21 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                     <div className="max-w-3xl mx-auto text-center">
                         <p className="text-lg font-bold">Todos esses bônus somam mais de R$735,00! E hoje para as 3 próximas que finalizarem a inscrição receberão totalmente GRATUITO junto com o plano personalizado CrioCaseira</p>
                         <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-4 text-muted-foreground text-sm">
-                            <p className="text-center md:text-left">➜ CrioCaseira Personalizada (R$297,00)</p><p className="text-center md:text-left">➜ Chá Turbo Seca (R$97,00)</p>
-                            <p className="text-center md:text-left">➜ Dieta Personalizada (R$197,00)</p><p className="text-center md:text-left">➜ Modo AnriReganho (R$97,00)</p>
-                            <p className="text-center md:text-left">➜ Libido em Alta (R$197,00)</p><p className="text-center md:text-left">➜ Plano Barriga Livre (R$147,00)</p>
-                            <p className="text-center md:text-left">➜ Suporte (R$97,00)</p><p className="text-center md:text-left">➜ Material Passo a Passo (R$97,00)</p>
-                            <p className="text-center md:text-left">➜ 4 Bônus Premium (R$735,00)</p><p className="text-center md:text-left">➜ Material Premium (R$297,00)</p>
-                            <p className="text-center md:text-left">➜ Acesso ao App (R$97,00)</p><p className="text-center md:text-left">➜ Grupo Exclusivo (R$47,00)</p>
+                            <p>➜ CrioCaseira Personalizada (R$297,00)</p><p>➜ Chá Turbo Seca (R$97,00)</p>
+                            <p>➜ Dieta Personalizada (R$197,00)</p><p>➜ Modo AnriReganho (R$97,00)</p>
+                            <p>➜ Libido em Alta (R$197,00)</p><p>➜ Plano Barriga Livre (R$147,00)</p>
+                            <p>➜ Suporte (R$97,00)</p><p>➜ Material Passo a Passo (R$97,00)</p>
+                            <p>➜ 4 Bônus Premium (R$735,00)</p><p>➜ Material Premium (R$297,00)</p>
+                            <p>➜ Acesso ao App (R$97,00)</p><p>➜ Grupo Exclusivo (R$47,00)</p>
+                        </div>
+                        <div className="mt-4">
+                            <p className="font-bold">VALOR NORMAL SEM DESCONTO</p>
+                            <p className="text-2xl font-bold text-destructive">R$ 2.405</p>
                         </div>
                         <div className="border-2 border-destructive rounded-lg p-6 mt-8 relative bg-white">
                             <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-destructive text-destructive-foreground px-4 py-1 rounded-full text-sm font-bold">93% OFF</span>
-                            <p className="text-muted-foreground line-through">VALOR TOTAL: R$ 2.405</p>
-                            <p className="text-lg mt-2">SOMENTE HOJE</p>
-                            <p className="text-sm text-muted-foreground">Por apenas 7x de</p>
+                            <p className="text-lg font-semibold mt-2">Mas apenas hoje, até as 23:59 ou acabar as 3 últimas vagas você levará com 93% de DESCONTO 👇🏷️</p>
+                            <p className="text-sm text-muted-foreground mt-4">Por apenas 7x de</p>
                             <p className="text-6xl font-bold text-success">R$ 6,16</p>
                             <PulsatingButton size="lg" className="w-full mt-4">QUERO MINHA VAGA</PulsatingButton>
                             <p className="text-xs text-muted-foreground mt-2">🎯 30 Dias de Garantia</p>
