@@ -78,7 +78,7 @@ export default function Home() {
   
   useEffect(() => {
     if (step === 17) {
-      const timer = setTimeout(() => setShowResultButton(true), 10000);
+      const timer = setTimeout(() => setShowResultButton(true), 332000); // 5 minutes and 32 seconds
       return () => clearTimeout(timer);
     }
   }, [step]);
