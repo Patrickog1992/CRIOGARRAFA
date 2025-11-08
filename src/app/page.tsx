@@ -71,7 +71,7 @@ export default function Home() {
 
   useEffect(() => {
     if (step === 0) {
-      const timer = setTimeout(() => setShowWelcomeButton(true), 10000);
+      const timer = setTimeout(() => setShowWelcomeButton(true), 423000); // 7 minutes and 3 seconds
       return () => clearTimeout(timer);
     }
   }, [step]);
