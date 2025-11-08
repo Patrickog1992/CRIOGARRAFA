@@ -83,6 +83,10 @@ export default function Home() {
     }
   }, [step]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [step]);
+
   const handleAnswer = (field: AnswerKey, value: any) => {
     setAnswers(prev => ({ ...prev, [field]: value }));
     setStep(prev => prev + 1);
@@ -437,7 +441,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                 <VturbPlayer playerId="690ba39e1e2607a796dc5d41" />
                 {showButton && (
                 <div id="call-to-action" className="mt-8">
-                  <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b" target="_blank" rel="noopener noreferrer">
+                  <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b">
                     <PulsatingButton size="lg" className="w-full max-w-md">COMEÇAR AGORA</PulsatingButton>
                   </a>
                   <div className="mt-12 max-w-4xl mx-auto space-y-12">
@@ -504,7 +508,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                             <CarouselNext className="hidden sm:flex" />
                         </Carousel>
                         <p className="mt-8 text-xl font-semibold">E o melhor? Tudo isso custa menos do que um lanche que só te afasta do corpo que você quer 🥪👇</p>
-                        <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b" target="_blank" rel="noopener noreferrer">
+                        <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b">
                           <PulsatingButton size="lg" className="mt-4">COMEÇAR AGORA</PulsatingButton>
                         </a>
                     </div>
@@ -567,7 +571,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                             <p className="text-lg font-semibold mt-2">Mas apenas hoje, até as 23:59 ou acabar as 3 últimas vagas você levará com 93% de DESCONTO 👇🏷️</p>
                             <p className="text-sm text-muted-foreground mt-4">Por apenas 7x de</p>
                             <p className="text-6xl font-bold text-success">R$ 6,16</p>
-                            <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b" target="_blank" rel="noopener noreferrer">
+                            <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b">
                               <PulsatingButton size="lg" className="w-full mt-4">QUERO MINHA VAGA</PulsatingButton>
                             </a>
                             <p className="text-xs text-muted-foreground mt-2">🎯 30 Dias de Garantia</p>
@@ -579,7 +583,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         <p className="text-muted-foreground">Você tem 30 dias completos para colocar a CrioCaseira em prática. Se, por qualquer motivo, não perceber resultado ou não se sentir satisfeita, é só enviar um e-mail ou WhatsApp e devolvemos 100% do seu dinheiro.</p>
                         <p className="font-bold mt-2">💰 Sem pegadinhas, sem burocracia, sem letras miúdas.</p>
                         <p className="text-primary font-bold mt-2 text-center">🎯 É simples assim: ou você vê seu corpo começar a mudar, ou não paga absolutamente nada.</p>
-                        <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b" target="_blank" rel="noopener noreferrer">
+                        <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b">
                           <PulsatingButton className="w-full mt-4">COMEÇAR AGORA</PulsatingButton>
                         </a>
                     </div>
@@ -607,7 +611,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                                 <p className="text-sm text-muted-foreground mt-2">Usando uma técnica caseira, natural e acessível, que já ajudou centenas de mulheres a eliminar gordura localizada em poucos minutos por dia, sem sair de casa.</p>
                             </div>
                         </div>
-                        <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b" target="_blank" rel="noopener noreferrer">
+                        <a href="https://pay.kirvano.com/b4920243-80f6-41b6-b41a-037f5794ee3b">
                           <PulsatingButton size="lg" className="mt-6">QUERO MINHA VAGA</PulsatingButton>
                         </a>
                     </div>
