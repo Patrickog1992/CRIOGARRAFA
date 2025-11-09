@@ -67,8 +67,7 @@ export default function Home() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState(initialAnswers);
   const [showWelcomeButton, setShowWelcomeButton] = useState(false);
-  const [showResultButton, setShowResultButton] = useState(false);
-
+  
   useEffect(() => {
     if (step === 0) {
       const timer = setTimeout(() => setShowWelcomeButton(true), 423000); // 7 minutes and 3 seconds
@@ -76,13 +75,6 @@ export default function Home() {
     }
   }, [step]);
   
-  useEffect(() => {
-    if (step === 17) {
-      const timer = setTimeout(() => setShowResultButton(true), 332000); // 5 minutes and 32 seconds
-      return () => clearTimeout(timer);
-    }
-  }, [step]);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [step]);
@@ -244,7 +236,7 @@ export default function Home() {
         return <LoadingScreen title="Gerando Sua CrioCaseira..." subtitle="Estamos mapeando seu perfil de acordo com todas suas respostas..." onComplete={() => setStep(17)} />;
 
       case 17:
-        return <ResultPage answers={answers} showButton={showResultButton} getImage={getImage} />;
+        return <ResultPage answers={answers} showButton={true} getImage={getImage} />;
 
       default:
         return <div>Fim do quizz</div>;
@@ -276,7 +268,7 @@ const QuestionStep = ({ title, description, options, field, onAnswer }: Question
         <Button
           key={opt.value}
           variant="outline"
-          className="h-auto p-6 text-left justify-start bg-white/50 border-primary/20 hover:bg-primary/10 hover:border-primary flex-wrap"
+          className="h-auto p-6 text-left justify-start bg-white/50 border-primary/20 hover:bg-primary/10 hover:border-primary flex-wrap focus-visible:ring-0 focus-visible:ring-offset-0"
           onClick={() => onAnswer(field, opt.value)}
         >
           <div className="flex items-start gap-4 w-full">
@@ -487,7 +479,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         </CardContent>
                     </Card>
 
-                    <div>
+                    <div className="flex flex-col items-center">
                         <h2 className="text-3xl font-bold mb-6">O que nossas alunas dizem...</h2>
                         <Carousel className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto" opts={{ loop: true }} plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}>
                             <CarouselContent>
@@ -524,7 +516,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         </ul>
                     </div>
 
-                    <div className="max-w-3xl mx-auto">
+                    <div className="max-w-3xl mx-auto flex flex-col items-center">
                          <h2 className="text-3xl font-bold mb-6">Sua Jornada de Transformação Com a CrioCaseira</h2>
                         <div className="grid md:grid-cols-3 gap-6 text-center">
                            <Card><CardContent className="p-4"> <h3 className="font-bold text-primary">7 Dias - Primeira Semana</h3><p className="text-sm text-muted-foreground mt-2">Você acorda e sente sua calça jeans escorregando pela cintura. A gordura da região de {answers.targetArea.toLowerCase()} já diminuiu significativamente.</p></CardContent></Card>
@@ -533,7 +525,7 @@ const ResultPage = ({ answers, showButton, getImage }: { answers: typeof initial
                         </div>
                     </div>
                     
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-4xl mx-auto flex flex-col items-center">
                         <h2 className="text-3xl font-bold">🎁 Ganhe 5 Bônus Exclusivos que Aceleram Sua Evolução</h2>
                         <p className="text-lg text-destructive font-semibold mt-2">Últimas 3 Vagas</p>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 text-center">
